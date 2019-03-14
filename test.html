@@ -1,0 +1,64 @@
+<!-- <form method="POST" action="http://localhost:3000/dangvien">
+    <input type="text" name="maDV">
+    <input type="text" name="maCT">
+    <input type="text" name="maKT">
+    <input type="text" name="maKL">
+    <input type="text" name="maXL">
+    <input type="text" name="hoTen">
+    <input type="text" name="ngaySinh">
+    <input type="text" name="gioiTinh">
+    <input type="text" name="CMTND">
+    <input type="text" name="danToc">
+    <input type="text" name="tonGiao">
+    <input type="text" name="diaChi">
+    <input type="text" name="ngheNghiep">
+    <input type="text" name="ngayVaoDang">
+    <input type="text" name="noiVaoDang">
+    <input type="submit" value="ok">
+</form> -->
+
+<!-- <form method="POST" action="http://localhost:3000/khenthuong">
+    <input type="text" name="makt">
+    <input type="text" name="tenkt">
+    <input type="submit" value="ok">
+</form> -->
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<button onclick="test()">Click me</button>
+<script>
+    function test() {
+        var URL = "http://localhost:3000/dangvien/DV001";
+
+        var dataObject = {
+            "maCT": "CT001",
+            "maKT": "KT001",
+            "maKL": "KL001",
+            "maXL": "XL001",
+            "hoTen": "A",
+            "ngaySinh": "B",
+            "gioiTinh": "B",
+            "CMTND": "",
+            "danToc": "",
+            "tonGiao": "",
+            "diaChi": "",
+            "ngheNhiep": "",
+            "ngayVaoDang": "",
+            "noiVaoDang": ""
+        };
+
+        alert(JSON.stringify(dataObject));
+
+        $.ajax({
+            url: URL,
+            type: 'PUT',
+            data: JSON.stringify(dataObject),
+            dataType: 'json',
+            success: function (result) {
+                alert("success?");
+            }
+        });
+    }
+
+</script>
